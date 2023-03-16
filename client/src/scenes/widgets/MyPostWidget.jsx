@@ -46,12 +46,13 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`{process.env.URL}/posts`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/posts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
     });
     const posts = await response.json();
+    posts.sort(function (a, b) { return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() })
     dispatch(setPosts({ posts }));
     setImage(null);
     setPost("");

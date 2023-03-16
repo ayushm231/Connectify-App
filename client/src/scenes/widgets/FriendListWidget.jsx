@@ -15,7 +15,7 @@ const FriendListWidget = ({ userId }) => {
 
     const getFriends = async() => {
         const response = await fetch(
-            `{process.env.url}/users/${userId}/friends`,
+            `${process.env.REACT_APP_URL}/users/${userId}/friends`,
             {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}`}

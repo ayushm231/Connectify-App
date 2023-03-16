@@ -342,11 +342,11 @@ const Form = () => {
     }
     formData.append("picturePath", values.picture.name);
 
-    const savedUserResponse = await fetch(
-      `{process.env.URL}/auth/register`,
+    const savedUserResponse = await fetch( 
+      `${process.env.REACT_APP_URL}/auth/register`,
       {
         method: "POST",
-        body: formData,
+        body: formData
       }
     );
     const savedUser = await savedUserResponse.json();
@@ -360,7 +360,7 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch(`{process.env.URL}/auth/login`, {
+    const loggedInResponse = await fetch(`${process.env.REACT_APP_URL}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),

@@ -127,7 +127,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
                 <Box
                     onClick={() => {
                         // navigate(`/profile/${friendId}`);
-                        navigate(`/profile/${ friendId }`, { replace: true })
+                        navigate(`/${ friendId }`, { replace: true })
                         navigate(0);
                     }}
                 >

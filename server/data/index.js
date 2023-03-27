@@ -140,6 +140,27 @@ export const users = [
     updatedAt: 1359322268,
     __v: 0,
   },
+
+  {
+    _id: { $oid: "6421ad8095864beef52a8995" },
+    firstName: "fake",
+    lastName: "man",
+    email: "fakeman@gmail.com",
+    password: "$2b$10$ENylGV852MggZL33X4xyv.J7XHaRM5zH3KwOATS93pvd7jcZVcTQi",
+    picturePath: "p4.jpeg",
+    friends: [
+      "6421ab62231e9e1c3adad8ee",
+      "6421ab62231e9e1c3adad8eb",
+      "6421ab62231e9e1c3adad8ec",
+    ],
+    location: "fakelocation",
+    occupation: "fakejob",
+    viewedProfile: { $numberInt: "4819" },
+    impressions: { $numberInt: "7099" },
+    createdAt: { $date: { $numberLong: "1679928704419" } },
+    updatedAt: { $date: { $numberLong: "1679928730756" } },
+    __v: { $numberInt: "3" },
+  },
 ];
 
 export const posts = [
